@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX .load() Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Load Content with jQuery .load()</h2>
+
+<button id="loadBtn">Load Content</button>
+<div id="content" style="margin-top:20px; border:1px solid #ccc; padding:10px;"></div>
+
+<script>
+  // Load content when button is clicked
+  $('#loadBtn').click(function() {
+    $('#content').load('data.html');  // data.html must be in same folder or accessible path
+  });
+</script>
+
+</body>
+</html>

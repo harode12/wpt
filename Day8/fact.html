@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+            function factorial(num) {
+
+                let fact = 1;
+                for(let i = 2; i <= num; i++) 
+                {
+                    fact *= i;
+                }
+                return fact;
+            }
+
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                let a = parseInt($("#n1").val()); 
+                let factResult = factorial(a);
+                $("#n2").val(factResult);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <label id="l1">Enter number</label>
+    <input type="number" id="n1"/><br><br>
+    <lable>Factorial is :</lable><input type="text" id="n2"/><br><br>
+    <button type="button" id="b1" value="Click">Click me</button>
+</body>
+</html>

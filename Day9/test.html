@@ -1,0 +1,33 @@
+<html>
+
+<body>
+
+    <p id="p1"></p>
+</body>
+
+<script>
+
+    // top part 
+                            
+    document.getElementById("p1").innerText = "data";
+
+    try {
+        data = "Content ";// global  top 
+        //let data;//local 
+        document.getElementById("p1").innerText = data;
+    } catch (err) {
+        document.getElementById("p1").innerText = "something went wrong";
+        
+    }
+    finally {
+
+
+    }
+
+</script>
+
+
+
+
+
+</html>

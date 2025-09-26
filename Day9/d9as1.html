@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>assignment 1</title>
+</head>
+<body>
+    enter the data<input type="text" required id="t1" minlength="2" maxlength="10" >
+    <button onclick="validate()">Display</button>
+    <p id="t2">Data</p>
+</body>
+<script>
+    function display(){
+    let a=document.getElementById("t1").value;
+    document.getElementById("t2").innerHTML=document.getElementById("t1").value
+    }
+     function validate() {
+
+        let ele = document.getElementById("t1");
+
+        console.log(ele.checkValidity())
+
+        if (ele.checkValidity()) {
+            document.getElementById("t2").innerText = document.getElementById("t1").value;
+        } else {
+            document.getElementById("t2").innerText = ele.validationMessage
+        }
+    }
+
+
+</script>
+</html>
