@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+</body>
+<script>
+    document.getElementById("p1").value="data"
+    try{
+     data ="hello"
+     //let data;
+    document.getElementById("p1").value="data"
+    } catch (err){
+        document.getElementById("p1").innerText="something went wrong"
+    }finally{
+    }
+</script>
+</html>

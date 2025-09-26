@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Employee Data Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Employee Data</h2>
+
+    <form id="employeeForm" onsubmit="handleSubmit(event)">
+        <label>First Name:</label><br>
+        <input type="text" id="firstName"><br><br>
+
+        <label>Last Name:</label><br>
+        <input type="text" id="lastName"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date" id="dob"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="error" id="errorMsg"></div>
+
+    <div id="result"></div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lastName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let dob = document.getElementById("dob").value.trim();
+
+            let errorMsg = document.getElementById("errorMsg");
+            let result = document.getElementById("result");
+            errorMsg.textContent = "";
+            result.innerHTML = "";
+
+            if (!firstName || !lastName || !email || !dob) {
+                errorMsg.textContent = "All fields are required!";
+                return;
+            }
+
+            result.innerHTML = `
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                    <tr>
+                        <td>${firstName}</td>
+                        <td>${lastName}</td>
+                        <td>${email}</td>
+                        <td>${dob}</td>
+                    </tr>
+                </table>
+            `;
+             // Clear input fields
+            clearInputs();
+        }
+         function clearInputs() {
+
+            // Clear input fields
+            document.getElementById("firstName").value = "";
+            document.getElementById("lastName").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("dob").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 2</title>
+</head>
+<body>
+    <h1>Ajax Concept get Data</h1>
+    <div id="d1">
+        <p>change the text</p>
+        <button onclick="load()">CLick to Read</button>
+    </div>
+</body>
+<script>
+    function load(){
+
+        const xxtp =new XMLHttpRequest();
+        xxtp.onload=function(){
+            const getData =JSON.parse(this.responseText);
+            console.log(getData);
+
+    document.getElementById("d1").innerHTML =  `<pre>${JSON.stringify(getData, null, 2)}</pre>`;
+       
+    }
+        xxtp.open("GET","https://jsonplaceholder.typicode.com/posts");
+        xxtp.send();
+    }
+
+</script>
+</html>

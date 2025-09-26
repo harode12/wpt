@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX $.get() Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Fetch Data with $.get()</h2>
+
+<button id="getDataBtn">Get Data</button>
+<div id="result" style="margin-top:20px; border:1px solid #ccc; padding:10px;"></div>
+
+<script>
+  $('#getDataBtn').click(function() {
+    $.get('data.json', function(response) {
+      $('#result').html('<pre>' + JSON.stringify(response, null, 2) + '</pre>');
+    });
+  });
+</script>
+
+</body>
+</html>

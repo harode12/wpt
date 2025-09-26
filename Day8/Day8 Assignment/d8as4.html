@@ -1,0 +1,42 @@
+<!-- 4. Using Jquery animate() API , 
+ write a div that has a nice quote in a nice font ,
+  color and size . Run the scroller from left to 
+  right 4 times , then R to L
+
+On click of the button -->
+<html>
+
+<head>
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+
+
+ <script>
+$(document).ready(function(){
+
+    $("#d1").slideup(1000);
+//    $("#d1").animate({ right: '00px' }, 1000)   
+//             .animate({ right: '650px' }, 1000);
+    // $("#d1").animate({ left: '650px' }, 1000)  // move left by 250px
+    //         .animate({ left: '0px' }, 1000);    // move back to original
+    //$("#d1").animate({left: '-250px'});
+
+   // $("#d1").slideup(1000);
+})
+   
+
+ </script>
+
+</head>
+<body>
+
+<div id="d1" style="padding: 40px ;background-color:red;color:blue;position: absolute;">
+hello
+</div>
+
+<p></p>
+
+</body>
+
+
+</html>
+

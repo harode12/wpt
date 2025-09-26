@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   
+    <title>assignment day 8</title>
+</head>
+<body>
+    <p><i>name</i></p>
+     <p><u>name</u></p>
+    <script></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+        $(document).ready(function() {
+          
+            var text = $("#d1").text();
+           
+            $("#d1").html("<i>" + text + "</i>");
+
+            var text = $("#d2").text();
+            $("#d2").html("<u>" + text + "</u>")
+        });
+    </script>
+</head>
+<body>
+    <p id="d1">name</p>
+    <p id="d2">name</p>
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>assignment 6</title>
+<style>
+  .highlight {
+    background-color: rgb(221, 132, 15);
+    font-weight: bold;
+}
+  .redText {
+    color: rgb(24, 73, 206);
+}
+    </style>
+</head>
+                    
+<body>
+    <p id="p1">this is a paragraph</p>
+    <button id="b1">Add</button>
+    <button id="b2">Remove</button>
+    <button id="b3">toggle</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        $('#b1').click(function(){
+            $('#p1').addClass('highlight');
+        });
+
+        $('#b2').click(function(){
+            $('#p1').removeClass('highlight');
+        });
+        $('#b3').click(function(){
+            $('#p1').toggleClass('redText');
+        });
+        
+    });
+
+</script>
+</body>
+</html>
