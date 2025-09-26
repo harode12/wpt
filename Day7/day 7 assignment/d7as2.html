@@ -1,0 +1,58 @@
+<html>
+
+<body onload="myMove">
+
+    <div id="d1" style="background-color: black;width: 50px;height: 50px; position: absolute;"></div>
+    <div id="d2" style="background-color: blueviolet;width: 50px;height: 50px; position: absolute;"></div>
+  </body>
+
+
+
+<script>
+
+let p = 0 ;
+function animate(){
+   setInterval(animate, 500);
+console.log("animate");
+    const ele = document.getElementById("d1");
+    const ele1 = document.getElementById("d2");
+    let id = null;
+clearInterval(id);
+  id = setInterval(animate, 500);
+ 
+
+    p++; 
+   // ele.style.top = p+'px';
+     ele.style.left = p+'px';
+      ele1.style.right = p+'px';
+
+}
+
+function myMove() {
+  let id = null;
+  const elem = document.getElementById("d1");   
+   const elem1 = document.getElementById("d2");  
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 651) {
+      clearInterval(id);
+    } else {
+      pos++; 
+    //  elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+      elem1.style.right = pos + "px";
+    }
+  }
+}
+myMove();
+
+</script>
+
+
+
+
+
+
+</html>

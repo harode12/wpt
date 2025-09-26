@@ -1,0 +1,77 @@
+ <html>
+<head>
+
+</head>
+
+<body>
+
+    <p id="p1"></p>
+
+    <input type="number" id="n">
+    <button type="button" onclick="add()"> add at end </button>
+    <button type="button" onclick="addAtStart()"> add at start</button>
+    <button type="button" onclick="deletefromend()"> delete from end</button>
+    <button type="button" onclick="deletefromstart()"> delete from start</button>
+    <button type="button" onclick="displayoddnumbers()">  display odd numbers </button>
+    <button type="button" onclick="displayEvenNumbers()"> display even numbers</button>
+
+
+</body>
+<script>
+
+ const a = [];
+
+ function add(){
+    let d = document.getElementById("n").value;
+    a.push(d);
+    console.log(a);
+    show();
+ }
+
+  function addAtStart(){
+    let d = document.getElementById("n").value;
+    a.unshift(d);
+    console.log(a);
+    show();
+ }
+
+ function deletefromend(){
+    let d = document.getElementById("n").value;
+    a.pop(d);
+    console.log(a);
+    show();
+ }
+
+ function deletefromstart(){
+    let d = document.getElementById("n").value;
+    a.shift(d);
+    console.log(a);
+    show();
+ }
+
+ function displayoddnumbers(){
+    let d = document.getElementById("n").value;
+    a.unshift(d);
+    console.log(a);
+    show();
+ }
+
+function displayoddnumbers() {
+     let oddNumbers = a.filter(item => Number(item) % 2 !== 0);
+     document.getElementById("p1").innerHTML = oddNumbers;
+    }
+    function displayEvenNumbers() {
+    let evenNumbers = a.filter(item => Number(item) % 2 === 0);
+    document.getElementById("p1").innerHTML = evenNumbers;
+    }
+
+function show(){
+document.getElementById("p1").innerHTML = a
+}
+</script>
+</html> 
+
+
+
+
+

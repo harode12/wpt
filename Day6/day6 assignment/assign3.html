@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+</head>
+<body>
+
+    <button id="myButton" onclick="display()">Click me</button>
+    <p>Click count: <span id="count">0</span></p>
+
+    <script>
+        let count = 0;
+
+        function display() {
+            count++;
+            document.getElementById("count").textContent = count;
+
+            // Disable the button if count is greater than 10
+            if (count > 10) {
+                document.getElementById("myButton").disabled = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Click Counter</title>
+  <style>
+    button:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <button id="clickBtn">Click me!</button>
+  <p>Click count: <span id="count">0</span></p>
+
+  <script>
+    const button = document.getElementById('clickBtn');
+    const countDisplay = document.getElementById('count');
+    let clickCount = 0;
+
+    button.addEventListener('click', () => {
+      clickCount++;
+      countDisplay.textContent = clickCount;
+
+      if (clickCount >= 10) {
+        button.disabled = true;  // Makes button readonly/disabled
+      }
+    });
+  </script>
+</body>
+</html> -->

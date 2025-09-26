@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer Example</title>
+  <style>
+    #clock {
+      font-size: 2rem;
+      font-family: monospace;
+    }
+    #status {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Live Clock (Will Stop in 10 Seconds)</h2>
+<div id="clock">--:--:--</div>
+<div id="status">Timer running...</div>
+
+<script>
+  let intervalId;
+
+  // Function to update the time every second
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  // Start the interval
+  intervalId = setInterval(updateClock, 1000);
+  updateClock(); // initial call to show time immediately
+
+  // Stop the interval after 10 seconds using setTimeout
+  setTimeout(() => {
+    clearInterval(intervalId);
+    document.getElementById("status").textContent = "Timer stopped after 10 seconds.";
+    document.getElementById("status").style.color = "red";
+  }, 10000); // 10000ms = 10 seconds
+</script>
+
+</body>
+</html>

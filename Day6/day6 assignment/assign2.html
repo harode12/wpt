@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="demo"></h1>
+
+<script>
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
+setTimeout(()=>{
+  
+})
+
+// myFunction();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live Timer</title>
+  <style>
+    #timer {
+      font-size: 2rem;
+      font-family: monospace;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Current Time</h2>
+  <div id="timer">--:--:--</div>
+
+  <script>
+    function updateTimer() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('timer').textContent = timeString;
+    }
+
+    // Initial call to display immediately without waiting 1 second
+    updateTimer();
+
+    // Update timer every 1000 ms (1 second)
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
+` -->
